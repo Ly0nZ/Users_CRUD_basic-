@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Users show</title>
+	<style>
+		.cancel_button {
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<ul class="collection with-header">
+        <li class="collection-header"><h4>User {{user.id}} profile</h4></li>
+        <li class="collection-item"><h5>Name:</h5>{{user.first_name}} {{user.last_name}}</li>
+        <li class="collection-item"><h5>Email:</h5> {{user.email}}</li>
+        <li class="collection-item"><h5>Created:</h5> {{user.created_at}}</li>
+        <li class="collection-item"><h5>Updated Last:</h5> {{user.update_at}}</li>
+      </ul>
+
+    <div class="cancel_button">
+		<a class="waves-effect blue waves-light btn" href="/index">Go Back</a>
+	</div>
+</body>
+</html>

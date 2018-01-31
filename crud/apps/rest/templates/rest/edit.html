@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Edit Users</title>
+	<style>
+		.button_margin {
+			margin: 20px 0px 0px 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h3>Edit User {{user.id}}</h3>
+		<form action="/editChange/{{user.id}}" method="POST">
+			{% csrf_token %}
+			<p>First Name <input type="text" name="first_name" value="{{user.first_name}}"></p>
+			<p>Last Name <input type="text" name="last_name" value="{{user.first_name}}"></p>
+			<p>Email <input type="email" name="email" value="{{user.email}}"></p>
+			<input class="btn waves-effect button_margin blue waves-light" type="submit" value="Update"><br />
+			
+			<div class="button_margin">
+				<a class="waves-effect blue waves-light btn" href="/index">Go Back</a>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
